@@ -10,7 +10,7 @@ const Calendar: React.FC<CalendarProps> = ({ date }) => {
 
   const firstDay = new Date(year, date.getMonth(), 1);
   const lastDay = new Date(year, date.getMonth() + 1, 0);
-  const selectedDate = new Date(year, date.getMonth()).getDate();
+  const selectedDate = date.getDate()
 
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
