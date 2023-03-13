@@ -3,7 +3,7 @@ import './App.css';
 import Calendar from './component/Calendar';
 
 function App() {
-  const [presentDate, setPresentDate] = useState('2023-3-12')
+  const [presentDate, setPresentDate] = useState(new Date().toISOString().substring(0,10))
   const [temp, setTemp] = useState('')
   return (
     <div className="App">
