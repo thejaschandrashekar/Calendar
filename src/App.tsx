@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Calendar from './component/Calendar';
 
 function App() {
-  const presentDate = new Date('2023-2-26')
+  const [presentDate, setPresentDate] = useState('')
   return (
     <div className="App">
-     <Calendar date={presentDate} />
+      <input type="date"
+      value={presentDate}
+      onChange={(e) => {
+        setPresentDate(e.target.value)
+      }} />
+     <Calendar date={new Date(presentDate)} />
     </div>
   );
 }
